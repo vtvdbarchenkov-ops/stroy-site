@@ -1,0 +1,383 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page {
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInPhoto {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+        color: #ffffff;
+    }
+}
+
+@keyframes menuItemAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonPulse {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+    }
+}
+
+@keyframes logoAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.header {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+
+.header__top-line {
+    width: 1864px;
+    height: 130px;
+    background: #ffffff;
+    margin-left: -6px;
+    margin-top: -20px;
+    opacity: 0;
+    animation: slideDown 1s ease forwards;
+}
+
+.header__nav {
+    position: absolute;
+    top: 50px;
+    z-index: 100;
+}
+
+.header__nav-link {
+    position: absolute;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: menuItemAppear 0.8s ease forwards;
+    transition: all 0.3s ease;
+}
+
+.header__nav-link:hover {
+    color: #FF6B35;
+    transform: translateY(-2px);
+}
+
+.header__nav-link--menu {
+    margin-left: 300px;
+    animation-delay: 0.2s;
+}
+
+.header__nav-link--services {
+    margin-left: 560px;
+    animation-delay: 0.4s;
+}
+
+.header__nav-link--reviews {
+    margin-left: 800px;
+    animation-delay: 0.6s;
+}
+
+.header__nav-link--about {
+    margin-left: 1050px;
+    animation-delay: 0.8s;
+}
+
+.header__logo {
+    position: absolute;
+    margin-top: -105px;
+    opacity: 0;
+    animation: logoAppear 1s ease forwards;
+    z-index: 100;
+}
+
+.header__cabinet-btn {
+    position: absolute;
+    top: 53px;
+    right: 400px;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    z-index: 100;
+    opacity: 0;
+    animation: menuItemAppear 0.8s ease forwards;
+    animation-delay: 1s;
+    transition: all 0.3s ease;
+}
+
+.header__cabinet-btn:hover {
+    color: #FF6B35;
+    transform: translateY(-2px);
+}
+
+.header__request-btn {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 1650px;
+    margin-top: -70px;
+    opacity: 0;
+    animation: buttonPulse 1.5s ease 1.5s forwards, pulse 2s infinite 3s;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 100;
+}
+.hero__image {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeInPhoto 2s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.hero__slogan {
+    position: absolute;
+    margin-top: -400px;
+    margin-left: 370px;
+    font-size: 30px;
+    color: #ffffff52;
+    opacity: 0;
+    animation: fadeInText 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.hero__price-btn {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: -100px;
+    margin-left: 753px;
+    position: absolute;
+    opacity: 0;
+    animation: fadeInPhoto 2s ease forwards;
+    animation-delay: 0.3s;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hero__price-bg {
+    width: 209px;
+    height: 50px;
+    background: #FF6B35;
+    margin-left: 750px;
+    margin-top: -110px;
+    border-radius: 30px;
+    position: absolute;
+    opacity: 0;
+    animation: fadeInPhoto 2s ease forwards;
+    animation-delay: 0.3s;
+    animation: buttonPulse 1.5s ease 1.5s forwards, pulse 2s infinite 3s;
+    cursor: pointer;
+    z-index: 10;
+}
+.services__title {
+    margin-left: 790px;
+    margin-top: 9px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.services__grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-top: 200px;
+}
+
+.services__card {
+    width: 350px;
+}
+
+.services__card-title {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.services__card-image {
+    display: block;
+}
+
+.services__card-description {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 28px;
+    line-height: 1.5;
+}
+
+.services__card-btn {
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    opacity: 0;
+    animation: buttonPulse 1.5s ease 1.5s forwards, pulse 2s infinite 3s;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.services__card:nth-child(1) .services__card-btn {
+    margin-left: 100px;
+    margin-top: px;
+}
+
+.services__card:nth-child(2) .services__card-btn {
+    margin-left: 780px;
+    margin-top: 30px;
+}
+
+.services__card:nth-child(3) .services__card-btn {
+    margin-left: -710px;
+    margin-top: 20px;
+}
+.advantages {
+    background: #2a2a2a;
+    padding: 60px 20px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.advantages__title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.advantages__grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.advantages__card {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 10px;
+    width: 200px;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #444;
+}
+.reviews {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.reviews__title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.reviews__grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.reviews__card {
+    background: #2a2a2a;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    color: white;
+    font-style: italic;
+    border-left: 4px solid #FF6B35;
+}
+
+.reviews__author {
+    margin-top: 15px;
+    font-style: normal;
+    color: #FF6B35;
+}
+.footer {
+    background: #2a2a2a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer__title {
+    color: #FF6B35;
+    margin-bottom: 20px;
+}
+
+.footer__contact {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.footer__copyright {
+    margin-top: 25px;
+    color: #999;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
